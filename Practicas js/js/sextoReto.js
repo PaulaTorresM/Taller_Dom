@@ -8,7 +8,7 @@ const expresiones = {
     apellido: /^[a-zA-Z0-9-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^[a-zA-Z0-9\\]{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[misena]+\.[edu.]+\.[com]+$/,
-    fecha: /^(19|2)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/
+    fecha: /^((19|[0-9])[0-9]{2}|(20|[0-9])[0-2]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/
 
 }
 

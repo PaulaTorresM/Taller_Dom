@@ -7,10 +7,14 @@
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="file:///C:/Users/Joretof/Desktop/Taller_Dom/Practicas js/css/style8.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<main>
-		<div class="container">
+		<div class="contenedor">
 			<br>
 		<form action="" class="formulario" id="formulario">
 			<div class="formulario__grupo" id="grupo__usuario">
@@ -69,7 +73,7 @@
 					<input type="date" class="formulario__input" name="fecha" id="fecha">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				
+				<p class="formulario__input-error">Debe ser mayor de edad</p>
 			</div>
 
 
@@ -106,11 +110,32 @@
 
 			<div class="formulario__grupo" id="grupo__terminos">
 				<label class="formulario__label">
-					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
 					Acepto los Terminos y Condiciones
 				</label>
+					<div class="modal fade" id="myModal" role="dialog">
+					  <div class="modal-dialog modal-sm">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h4 class="modal-title">Acepta Terminos y Condiciones</h4>
+						  </div>
+						  <div class="modal-body">
+							<p>Estos Términos del Servicio reflejan la forma de trabajar de Google como empresa,
+								<br>
+								 las leyes por las que nos regimos y determinados aspectos que siempre hemos creído que son ciertos.
+								 <br> Por ello, estos Términos del Servicio ayudan a definir la relación que tiene Google contigo cuando interactúas con nuestros servicios. Por ejemplo, estos términos incluyen las siguientes secciones:
+								<br>
+								 Qué puedes esperar de nosotros, donde se describe cómo proporcionamos y desarrollamos nuestros servicios.
+							 Lo que esperamos de ti, donde se establecen ciertas reglas para utilizar nuestros servicios.</p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
 			</div>
-
+			
 			<div class="formulario__mensaje" id="formulario__mensaje">
 				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
 			</div>
@@ -121,6 +146,7 @@
 			</div>
 		</form>
 	</div>
+
 	</main>
 
 	<script src="js/sextoReto.js"></script>
